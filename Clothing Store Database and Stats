@@ -1,0 +1,26 @@
+--Create a clothing store database
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, weather TEXT, price INTEGER, style TEXT);
+
+INSERT INTO clothing VALUES (1, "T-Shirts", 30, "warm", 15, "casual");
+INSERT INTO clothing VALUES (2, " Short-Sleeved Blouses", 35, "warm", 20, "formal");
+INSERT INTO clothing VALUES (3, "Skirts", 27, "warm", 30, "casual");
+INSERT INTO clothing VALUES (4, "Skinny Jeans", 30, "cold", 40, "casual");
+INSERT INTO clothing VALUES (5, "Leggings", 25, "cold", 20, "casual");
+INSERT INTO clothing VALUES (6, "Jackets", 30, "cold", 50, "casual");
+INSERT INTO clothing VALUES (7, "Long-Sleeved Blouses", 30, "cold", 30, "formal");
+INSERT INTO clothing VALUES (8, "Scarves", 20, "cold",15, "casual");
+INSERT INTO clothing VALUES (9, "Double-Layered Socks", 20, "cold", 10, "casual");
+INSERT INTO clothing VALUES (10, "Gloves", 20, "cold", 10, "casual");
+INSERT INTO clothing VALUES (11, "Regular Socks", 20, "warm", 8, "casual");
+INSERT INTO clothing VALUES (12, "Pant-Suit", 27, "cold", 60, "formal");
+INSERT INTO clothing VALUES (13, "Boot-Legged Pants", 30, "cold", 40, "casual");
+INSERT INTO clothing VALUES (14, "Beanie Hats", 10, "cold", 15, "casual");
+INSERT INTO clothing VALUES (15, "Tank Tops", 15, "warm", 10, "casual");
+
+--display the database ordered by price.
+SELECT * FROM clothing 
+ORDER BY price;
+
+--How many items were in each of the weather categories?
+SELECT weather, SUM(quantity) FROM clothing GROUP BY weather
