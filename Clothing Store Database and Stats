@@ -23,4 +23,5 @@ SELECT * FROM clothing
 ORDER BY price;
 
 --How many items were in each of the weather categories?
-SELECT weather, SUM(quantity) FROM clothing GROUP BY weather
+SELECT weather, SUM(quantity) FROM clothing GROUP BY weather;
+
